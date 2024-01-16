@@ -86,13 +86,10 @@ class PapayaSegmenter {
                     z: this.viewer.cursorPosition.z
                 }
                 if (this.viewer.intersectsMainSlice(testPoint)) {
-                    console.log("point in main slice");
                     path.lineTo(points[i].x, points[i].y);
                 }
                 else{
-                    console.log("Point not in main slice");
                 }
-                // path.lineTo(points[i].x, points[i].y);
             }
             ctx.fillStyle = "red";
             ctx.fill(path);
