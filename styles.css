@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset and base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+/* Minimal navbar adjustments */
+.navbar {
+  /* Bootstrap container manages spacing */
+}
+
+/* Header Info Section */
+#header-info {
+  padding: 20px 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-title {
+  font-weight: 100;
+  font-size: 55px !important;
+}
+
+/* Header Title */
+.intro-text h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.intro-text h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+/* Headshot Styling */
+.intro-photo {
+  display: inline-block;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.intro-photo img {
+  width: 220px;
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out; /* Smooth resize effect */
+}
+
+/* Clear float */
+.intro-text:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #header-info {
+    text-align: center;
+  }
+
+  .intro-photo {
+    float: none;
+    display: block;
+    margin: 0 auto 15px auto; /* Center the image */
+  }
+
+  .intro-photo img {
+    width: 75%; /* Adjust width based on screen */
+    max-width: 150px; /* Cap size for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-photo img {
+    width: 50%; /* Scale down more on very small screens */
+    max-width: 120px;
+  }
+}
+
+/* Timeline Entries */
+.entry {
+  position: relative;
+  margin-bottom: 1.5rem;
+  /* Using Bootstrap's row structure, so no extra align-items needed */
+}
+
+.entry.row {
+  margin-bottom: 0 !important;
+}
+
+/* Timespan styling */
+.timespan {
+  font-size: 14px;
+  color: #666;
+  padding-right: 10px;
+  align-self: start;
+  position: relative;
+  z-index: 2;
+}
+
+/* Icon Column (.ico) styling: ensures full-height dotted line */
+.ico {
+  position: relative;
+  height: 100%;  /* Stretch to fill the row height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2px dashed #cfcfcf;
+  padding-left: 0.5rem;
+}
+
+/* Timeline bullet (dot) */
+.entry-dot {
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #cfcfcf;
+  border: 2px solid white;
+  z-index: 3;
+}
+
+/* Logo/Image styling within the timeline */
+.ico img {
+  width: 200%;
+  max-width: 85px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-top: 0.2rem;
+  margin-left: 2rem;
+}
+
+/* Description styling */
+.desc {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.desc strong {
+  color: #444;
+}
+
+.desc a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.desc a:hover {
+  text-decoration: underline;
+}
+
+/* Map styling */
+#map {
+  height: 90vh;
+  position: sticky;
+  top: 20px;
+  border-left: 1px solid #eee;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #map {
+    position: static;
+    height: 300px;
+    border-left: none;
+    margin-top: 20px;
+  }
+  
+  .timespan {
+    width: auto;
+  }
+  
+  .ico {
+    border-left: 2px solid #cfcfcf;
+  }
+  
+  #header-info {
+    text-align: left;
+  }
+  
+  .intro-photo img {
+    margin-top: 20px;
+  }
+}

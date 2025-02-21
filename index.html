@@ -1,78 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JosephITurner.com</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        .hero-section {
-            background-color: #f8f9fa;
-            padding: 60px 0;
-        }
-        .hero-text {
-            color: #343a40;
-        }
-        .post-list {
-            margin-top: 30px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Joseph Turner</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="/">JosephITurner.com</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about.html">About</a>
-                    </li>
-                </ul>
-            </div>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <a class="navbar-brand" href="#">Joseph Turner</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#publications">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cv">CV</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section text-center">
-        <div class="container">
-            <h1 class="hero-text">Welcome to JosephITurner.com</h1>
-            <p class="lead hero-text">Joseph Turner's thoughts on random topics.</p>
+    <!-- Header Info Section -->
+    <div class="container" id="header-info">
+        <div class="row">
+        <div class="col-12">
+            <div class="intro-text">
+            <div class="intro-photo d-inline-block float-end">
+                <img src="./assets/Joseph_Turner_headshot.jpg" alt="My Photo" class="img-fluid rounded">
+            </div>
+            <h1 class="intro-title">Joseph Turner</h1>
+            <h3>Medical Student @ NYU Grossman '28</h3>
+            <p>
+                Hi, I'm Joseph Turner. I'm an incoming medical student at NYU Grossman School of Medicine in New York City.
+                <br><br>
+                I'm interested in neuroimaging, computer science, and brain stimulation—exploring how these tools can help us understand and treat neurological conditions like movement disorders and epilepsy.
+                <br><br>
+                More broadly, I'm fascinated by the mechanics of the brain and intelligence itself—how they emerge, adapt, and can be influenced.            </p>
+            </div>
         </div>
-    </section>
-
-    <!-- Blog Post List -->
-    <section class="post-list">
-        <div class="container">
-            <h2 class="text-center">Recent Posts</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><a href="/thoughts_on_ai.html">Ten Thoughts on AI</a></li>
-                <li class="list-group-item"><a href="/toxic_compassion.html">Toxic Compassion</a></li>
-                <li class="list-group-item"><a href="/trump_case.html">Ten Facts about the New York Attorney General's Case Against Donald Trump</a></li>
-                <li class="list-group-item"><a href="/TurnerArticle.pdf">Interoceptive Dysregulation in Depression</a></li>
-            </ul>
         </div>
-    </section>
+    </div>
+  
 
-    <br><br><br><br><br><br>
+  </header>
 
-    <!-- Footer -->
-    <footer class="bg-light py-4">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2024 JosephITurner.com</p>
+  <div class="container">
+    <div class="row">
+        <hr>
+
+        <div class="col-lg-1">
+
         </div>
-    </footer>
+        <div class="col-lg-10">
+            <h3 class="mb-4">Timeline</h3>
+        </div>
+        <div class="col-lg-1">
+            
+        </div>
+    </div>
+    <div class="row">
+      <!-- Timeline Column -->
+      <div class="col-lg-9" id="timeline">
+        <!-- Timeline Entry 1 -->
+        <div class="entry row mb-4" data-location="nyc">
+          <div class="col-3 text-end">
+            <div class="timespan">2025</div>
+          </div>
+          <div class="col-1 position-relative">
+            <div class="ico d-flex flex-column align-items-center">
+              <div class="entry-dot"></div>
+              <img src="./assets/nyu.png" alt="NYU Logo" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="desc">
+              <strong>MD student at NYU Grossman</strong>. NYU has been a dream of mine ever since they introduced full-tuition scholarships for all MD students. The three-year curriculum, world-class hospitals, and incredible group of peers made this an easy choice.
+                <br><br>
+            </div>
+          </div>
+        </div>
 
-    <!-- Bootstrap 5 JS and dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Timeline Entry 2 -->
+        <div class="entry row mb-4" data-location="boston">
+          <div class="col-3 text-end">
+            <div class="timespan">2024 - 2025</div>
+          </div>
+          <div class="col-1 position-relative">
+            <div class="ico d-flex flex-column align-items-center">
+              <div class="entry-dot"></div>
+              <img src="./assets/hms.png" alt="Harvard Medical School" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="desc">
+              <strong>Research Assistant</strong> at the Center for Brain Circuit Therapeutics, Brigham and Women's Hospital / Harvard Medical School. I worked with <a href="https://scholar.google.com/citations?user=7gsFKcQAAAAJ" target="_blank">Frederic Schaper</a> on epilepsy and deep brain stimulation research, diving into neuroimaging and transcriptomic data to uncover how brain circuits shape neurological conditions. Mentored by <a href="https://scholar.google.co.uk/citations?user=d9kqMj0AAAAJ&hl=en" target="_blank">Mike Fox</a> and <a href="https://scholar.google.com/citations?user=cIC-OOgAAAAJ&hl=en" target="_blank">Michael Ferguson</a>, I helped build and manage the lab's computational infrastructure and improved our analysis pipelines.
+                <br><br>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Entry 3 -->
+        <div class="entry row  mb-4" data-location="provo">
+          <div class="col-3 text-end">
+            <div class="timespan">2023</div>
+          </div>
+          <div class="col-1 position-relative">
+            <div class="ico d-flex flex-column align-items-center">
+              <div class="entry-dot"></div>
+              <img src="./assets/byu.svg" alt="BYU" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="desc">
+              <strong>BS in Neuroscience at BYU</strong> on a full-tuition merit scholarship. I worked with <a href="https://scholar.google.com/citations?user=Pzuok1MAAAAJ" target="_blank">Jared Nielsen</a> on computational neurology research, developing <a href="https://lesionbank.org" target="_blank">LesionBank.org</a>—an online database linking brain lesions to functional connectivity. I even built an ML app to classify neurologic symptoms in stroke patients, which took me to the final stage of BYU's Student Innovator of the Year competition (and netted me $4,000). After missing a key scholarship renewal deadline, I speedran my degree to graduate in only four semesters, all while squeezing in an internship at Harvard working on machine learning applications for anesthesia.
+              <br><br>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Entry 4 -->
+        <div class="entry row mb-4" data-location="natal">
+          <div class="col-3 text-end">
+            <div class="timespan">2020 - 2022</div>
+          </div>
+          <div class="col-1 position-relative">
+            <div class="ico d-flex flex-column align-items-center">
+              <div class="entry-dot"></div>
+              <!-- No logo provided -->
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="desc">
+              <strong>Latter-day-saint (Mormon) missionary</strong> in northeast Brazil. I spent most of my time in small deserty towns like Pau dos Ferros, Patos, and Mossoró, and then another year in Natal on the coast. Best moment: Brazilians telling me I was surprisingly good at soccer for an American. Worst moment: Getting escorted at gunpoint through the favela by drug dealers.
+              <br><br>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Entry 5 -->
+        <div class="entry row mb-4" data-location="austin">
+          <div class="col-3 text-end">
+            <div class="timespan">2019</div>
+          </div>
+          <div class="col-1 position-relative">
+            <div class="ico d-flex flex-column align-items-center">
+              <div class="entry-dot"></div>
+              <img src="./assets/acc.png" alt="ACC" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="desc">
+              <strong>AS at Austin Community College</strong> with a major in Chemistry, where I graduated at age 17.
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map Column -->
+      <div class="col-lg-3" id="map">
+        <!-- Map will render here -->
+      </div>
+    </div>
+    <br><br>
+  </div>
+
+  <!-- Leaflet JS and Bootstrap Bundle -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
